@@ -2,7 +2,7 @@
 
 <body>
 
-JSP Page
+JSP Page , welcome ${name} , Enjoy
 </body>
 
 
