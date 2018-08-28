@@ -19,6 +19,7 @@ this is all todos you have
 <th> discription </th>
 <th> Date </th>
 <th> is Done ? </th>
+<th>Delete</th>
 </tr>
 
 
@@ -35,7 +36,7 @@ this is all todos you have
 <td>${todo.desc}</td>
 <td>${todo.targetDate}</td>
 <td>${todo.done}</td>
-
+<td><a type="button" href="/deletetodo?id=${todo.id}">Delete</a></td>
 </tr>
 
 

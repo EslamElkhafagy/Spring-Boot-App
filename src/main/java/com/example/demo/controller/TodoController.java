@@ -28,12 +28,12 @@ public class TodoController {
 		return "alltodo";
 	}
 	
-	@RequestMapping(value="/deletetodo/{id}", method=RequestMethod.DELETE)
-	@ResponseBody
-	public boolean deleteTodo(@RequestParam int id) {
+	@RequestMapping(value="/deletetodo", method=RequestMethod.GET)
+//	@ResponseBody
+	public String deleteTodo(@RequestParam int id) {
 		
-		return todoservice.deleteTodo(id);
-		
+		 todoservice.deleteTodo(id);
+		return "redirect:/alltodos";
 	}
 	
 	@RequestMapping(value="/addnewtodo",method=RequestMethod.GET)
