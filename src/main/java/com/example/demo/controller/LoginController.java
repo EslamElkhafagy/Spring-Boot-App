@@ -6,10 +6,12 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.example.demo.services.LoginService;
 
 @Controller
+@SessionAttributes("sessionName")
 public class LoginController {
 
 	@Autowired
@@ -50,8 +52,8 @@ public class LoginController {
 		}
 			
 		System.out.println("name is = "+name);
-		
-		model.put("name", name);
+//		model.get("sessionName");
+		model.put("name",(String)model.get("sessionName"));
 		
 //		System.out.println("EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
 	return "welcome";
